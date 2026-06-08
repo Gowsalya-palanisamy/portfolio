@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gowsalya P | Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:50px;
+}
+
+.hero-content{
+    display:flex;
+    align-items:center;
+    gap:60px;
+    flex-wrap:wrap;
+}
+
+.hero-text h1{
+    font-size:4rem;
+    color:#8b5cf6;
+}
+
+.hero-text h2{
+    font-size:1.8rem;
+    margin-top:10px;
+}
+
+.hero-text p{
+    margin-top:20px;
+    max-width:500px;
+    line-height:1.8;
+    color:#cbd5e1;
+}
+
+.typing{
+    color:#06b6d4;
+    font-weight:600;
+}
+
+.buttons{
+    margin-top:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 25px;
+    text-decoration:none;
+    border-radius:30px;
+    margin-right:15px;
+    transition:0.3s;
+}
+
+.resume{
+    background:#8b5cf6;
+    color:white;
+}
+
+.linkedin{
+    border:2px solid #06b6d4;
+    color:#06b6d4;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+}
+
+.hero-image img{
+    width:320px;
+    height:320px;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid #8b5cf6;
+    box-shadow:0 0 30px #8b5cf6;
+}
+
+@media(max-width:768px){
+.hero-text h1{
+    font-size:2.5rem;
+}
+.hero-content{
+    text-align:center;
+}
+}
+.section-title{
+    text-align:center;
+    font-size:2.5rem;
+    margin-bottom:30px;
+    color:#8b5cf6;
+}
+
+.about{
+    padding:80px 10%;
+}
+
+.about-card{
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(10px);
+    padding:40px;
+    border-radius:20px;
+    line-height:1.8;
+    color:#cbd5e1;
+}
+
+.skills{
+    padding:80px 10%;
+}
+
+.skills-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+}
+
+.skill-card{
+    background:rgba(255,255,255,0.05);
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.skill-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 20px #8b5cf6;
+}
+
+.projects{
+    padding:80px 10%;
+}
+
+.projects-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+/* BIG CARD */
+.project-card{
+    background:rgba(255,255,255,0.06);
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    transition:0.4s;
+    min-height:420px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    border:1px solid rgba(139,92,246,0.3);
+}
+
+/* IMAGE */
+.project-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:15px;
+    margin-bottom:15px;
+}
+
+/* HOVER */
+.project-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 0 25px rgba(139,92,246,0.6);
+}
+}
+
+.experience{
+    padding:80px 10%;
+}
+
+.experience-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:25px;
+}
+
+.experience-card{
+    background:rgba(255,255,255,0.05);
+    padding:30px;
+    border-radius:20px;
+    transition:0.4s;
+}
+
+.experience-card h3{
+    color:#8b5cf6;
+    margin-bottom:10px;
+}
+
+.experience-card h4{
+    color:#06b6d4;
+    margin-bottom:15px;
+}
+
+.experience-card p{
+    color:#cbd5e1;
+    line-height:1.7;
+}
+
+.experience-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px rgba(139,92,246,0.6);
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:20px 8%;
+    background:rgba(15,23,42,0.95);
+    backdrop-filter:blur(10px);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+}
+
+.logo{
+    font-size:1.5rem;
+    font-weight:700;
+    color:#8b5cf6;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#8b5cf6;
+}
+
+.hero{
+    padding-top:100px;
+}
+
+.contact{
+    padding:80px 10%;
+}
+
+.contact-card{
+    background:rgba(255,255,255,0.05);
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+}
+
+.contact-card p{
+    margin:20px 0;
+    color:#cbd5e1;
+    font-size:1.1rem;
+}
+
+.contact-card a{
+    color:#06b6d4;
+    text-decoration:none;
+}
+
+</style>
+</head>
+
+<body>
+    <nav class="navbar">
+
+    <div class="logo">Gowsalya P</div>
+
+    <ul class="nav-links">
+        <li><a href="#home">🏠 Home</a></li>
+        <li><a href="#about">👩 About</a></li>
+        <li><a href="#skills">🛠 Skills</a></li>
+        <li><a href="#projects">📂 Projects</a></li>
+        <li><a href="#experience">💼 Experience</a></li>
+        <li><a href="#contact">📞 Contact</a></li>
+    </ul>
+
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="hero-image">
+<img src="profile.jpg" alt="Gowsalya">
+</div>
+
+<div class="hero-text">
+
+<h1>Gowsalya Palanisamy</h1>
+
+<h2>
+I'm a <span class="typing"></span>
+</h2>
+
+<p>
+Electronics and Communication Engineering graduate currently working at Dotnix Solutions. Passionate about IoT, Digital Marketing, Web Technologies, and Creative Design.
+</p>
+
+<div class="buttons">
+<a href="resume.pdf" class="btn resume">Download Resume</a>
+
+<a href="https://www.linkedin.com/in/gowsalya-palanisamy-aa4313273 "
+class="btn linkedin"
+target="_blank">
+LinkedIn
+</a>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+const texts = [
+"Associate Software Engineer",
+"IoT Developer",
+"Digital Marketer",
+"Thumbnail Designer",
+"Content Creator"
+];
+
+let count = 0;
+let index = 0;
+let currentText = "";
+let letter = "";
+
+(function type(){
+
+if(count === texts.length){
+count = 0;
+}
+
+currentText = texts[count];
+letter = currentText.slice(0, ++index);
+
+document.querySelector(".typing").textContent = letter;
+
+if(letter.length === currentText.length){
+setTimeout(() => {
+index = 0;
+count++;
+type();
+}, 1500);
+}
+else{
+setTimeout(type, 100);
+}
+
+})();
+</script>
+
+</body>
+</html>
+<section class="about" id="about">
+
+    <h2 class="section-title">About Me</h2>
+
+    <div class="about-card">
+
+        <p>
+            Hello! I'm <strong>Gowsalya P</strong>, an Electronics and Communication Engineering graduate with a passion for technology, creativity, and continuous learning.
+        </p>
+
+        <br>
+
+        <p>
+            I am currently working as an <strong>Associate Software Engineer at Dotnix Solutions Pvt Ltd</strong>, where I gain hands-on experience in HTML, Digital Marketing, web technologies, and professional business workflows. As part of my role, I developed an <strong>Email Automation for Domain Warming</strong> system that automates email opening and link-click actions, helping improve workflow efficiency and supporting email deliverability processes.
+        </p>
+
+        <br>
+
+        <p>
+            During my academic journey, I worked on several innovative projects, including the <strong>Smart Anganwadi Monitoring System (SAMS)</strong>, <strong>Smart Door Opening System</strong>, and <strong>Motion Detector using ESP32</strong>. These projects strengthened my knowledge of IoT, embedded systems, automation, and problem-solving while providing practical experience in developing real-world solutions.
+        </p>
+
+        <br>
+
+        <p>
+            Beyond technology, I enjoy designing thumbnails, creating digital content, video editing, photography, and art & craft. I enjoy combining creativity with technology to create engaging and impactful digital experiences.
+        </p>
+
+        <br>
+
+        <p>
+            My goal is to continuously enhance my technical expertise, contribute to innovative projects, and grow into a skilled technology professional who creates meaningful solutions and makes a positive impact through technology.
+        </p>
+
+    </div>
+
+</section>
+<section class="skills" id="skills">
+
+    <h2 class="section-title">Skills</h2>
+
+    <div class="skills-container">
+
+        <div class="skill-card">HTML</div>
+        <div class="skill-card">Python</div>
+        <div class="skill-card">IoT</div>
+        <div class="skill-card">Digital Marketing</div>
+        <div class="skill-card">Canva</div>
+        <div class="skill-card">Arduino</div>
+        <div class="skill-card">ESP32</div>
+
+    </div>
+
+</section>
+<section class="projects" id="projects">
+
+<h2 class="section-title">Projects</h2>
+
+<div class="projects-container">
+
+    <!-- 1 -->
+    <div class="project-card">
+        <img src="sams.png" alt="SAMS">
+        <h3>Smart Anganwadi Monitoring System</h3>
+        <p>ICDS based child health monitoring system.</p>
+    </div>
+
+    <!-- 2 -->
+    <div class="project-card">
+        <img src="door.png" alt="Door">
+        <h3>Smart Door Opening System</h3>
+        <p>Automatic door open using PIR sensor.</p>
+    </div>
+
+    <!-- 3 -->
+    <div class="project-card">
+        <img src="esp32.png" alt="ESP32">
+        <h3>Motion Detector System</h3>
+        <p>ESP32 detects motion and sends alerts.</p>
+    </div>
+
+    <!-- 4 -->
+    <div class="project-card">
+        <img src="Email Automation.png" alt="Email Automation">
+        <h3>Email Automation System</h3>
+        <p>Automated email open & click for domain warming.</p>
+    </div>
+
+</div>
+
+</section>
+
+</section>   <!-- Projects section end -->
+<section class="experience" id="experience">
+
+    <h2 class="section-title">Experience</h2>
+
+    <div class="experience-container">
+
+        <div class="experience-card">
+            <h3>Associate Software Engineer</h3>
+            <h4>Dotnix Solutions Pvt Ltd</h4>
+            <p>
+                Working on HTML, Digital Marketing, Email Deliverability, and Automation. Developed an Email Automation for Domain Warming system to improve workflow efficiency.
+            </p>
+        </div>
+
+        <div class="experience-card">
+            <h3>IoT Intern</h3>
+            <h4>Retech Solutions Pvt Ltd</h4>
+            <p>
+                Worked on IoT-based projects using Arduino, sensors, and embedded systems. Developed a Smart Door Opening System during the internship.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+<section class="contact" id="contact">
+
+    <h2 class="section-title">Contact Me</h2>
+
+    <div class="contact-card">
+
+        <p>📧 Email: gowsalyap@gmail.com</p>
+
+        <p>💻 GitHub: GowsalyaPalanisamy-P</p>
+
+        <p>
+            🔗 LinkedIn:
+            <a href="https://www.linkedin.com/in/gowsalya-palanisamy-aa4313273" target="_blank">
+                View Profile
+            </a>
+        </p>
+
+    </div>
+
+</section>
+<footer style="text-align:center;padding:30px;color:#94a3b8;">
+    © 2026 Gowsalya P | Portfolio
+</footer>
+
+</body>
+</html>
